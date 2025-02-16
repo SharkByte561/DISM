@@ -7,4 +7,7 @@
 <b>Objectives:</b>
 
 * Prepare Windows 11 installation USB
+  * Create Windows 11 installation USB
+  * Add autounattend.xml to the usb drive
+  * Remove Install.esd from usb drive
 * Prepare Install.wim
