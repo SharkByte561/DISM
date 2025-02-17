@@ -2,7 +2,7 @@
 
 <b>Documentation:</b>
 
-[Split-WindowsImage](https://learn.microsoft.com/en-us/powershell/module/dism/split-windowsimage?view=windowsserver2025-ps)
+* [Split-WindowsImage](https://learn.microsoft.com/en-us/powershell/module/dism/split-windowsimage?view=windowsserver2025-ps)
 
 <b>Split-WindowsImage:</b>
 
@@ -10,7 +10,6 @@
 $split_image = @{
     ImagePath      = "Q:\Downloads\install.wim"
     SplitImagePath = "Q:\Downloads\install.swm"
-    LogPath        = "Q:\Downloads\log.txt"
     FileSize       = 1024
     CheckIntegrity = $true
 }
