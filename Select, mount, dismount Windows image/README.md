@@ -13,6 +13,7 @@
 * Mount Windows 11 Pro
 * Place .txt file in windows image
 * Dismount Windows image
+* Split Install.wim into multiple files
 * Test changes
 
 <b>Get-WindowsImage:</b>
