@@ -54,4 +54,4 @@ Split-WindowsImage @split_image
 <b>DISM:</b>
 
 * [Preparing Windows USB and Install.wim](https://youtu.be/rdrO4Cqaow4)
-* [Reduce Install.wim size by splitting it into multiple files]()
+* [Reduce Install.wim size by splitting it into multiple files](https://youtu.be/fwQ1VlJvnSw)
