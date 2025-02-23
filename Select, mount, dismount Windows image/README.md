@@ -7,15 +7,6 @@
 * [Dismount-WindowsImage](https://learn.microsoft.com/en-us/powershell/module/dism/dismount-windowsimage?view=windowsserver2025-ps)
 * [Split-WindowsImage](https://learn.microsoft.com/en-us/powershell/module/dism/split-windowsimage?view=windowsserver2025-ps)
 
-<b>Objectives:</b>
-
-* Figure out Windows 11 Pro image ID
-* Mount Windows 11 Pro
-* Place .txt file in windows image
-* Dismount Windows image
-* Split Install.wim into multiple files
-* Test changes
-
 <b>Get-WindowsImage:</b>
 
 ```powershell
