@@ -24,7 +24,6 @@ $mount_windows_image = @{
     Index     = 6 # Windows 11 Pro
     Path      = "Q:\Downloads\windows"
 }
-
 Mount-WindowsImage @mount_windows_image
 ```
 
