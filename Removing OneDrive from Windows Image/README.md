@@ -1,20 +1,14 @@
-# DISM: Select, mount, dismount Windows image
+# DISM: Removing OneDrive from Windows Image
 
-<b>Documentation:</b>
+<b>Objectives:</b>
 
-* [Get-WindowsImage](https://learn.microsoft.com/en-us/powershell/module/dism/get-windowsimage?view=windowsserver2025-ps)
-* [Mount-WindowsImage](https://learn.microsoft.com/en-us/powershell/module/dism/mount-windowsimage?view=windowsserver2025-ps)
-* [Dismount-WindowsImage](https://learn.microsoft.com/en-us/powershell/module/dism/dismount-windowsimage?view=windowsserver2025-ps)
-* [Split-WindowsImage](https://learn.microsoft.com/en-us/powershell/module/dism/split-windowsimage?view=windowsserver2025-ps)
-
-<b>Get-WindowsImage:</b>
-
-```powershell
-$image = @{
-    ImagePath = "Q:\Downloads\install.wim"
-}
-Get-WindowsImage @image
-```
+* Remove OneDrive from Windows Image
+    * Mount Windows image
+    * Mount Default users registry
+    * Remove OneDrive installation registry
+    * Dismount registry
+    * Dismount Windows image
+    * Split Install.wim and test changes
 
 <b>Mount-WindowsImage:</b>
 
@@ -24,7 +18,30 @@ $mount_windows_image = @{
     Index     = 6 # Windows 11 Pro
     Path      = "Q:\Downloads\windows"
 }
+
 Mount-WindowsImage @mount_windows_image
+```
+
+<b>Load default user registry:</b>
+
+```batch
+REG load HKLM\image Q:\Downloads\windows\Users\Default\NTUSER.DAT
+```
+
+<b>Remove OneDrive installation registry:</b>
+
+```powershell
+$remove_onedrive = @{
+    Path = "HKLM:\image\Software\Microsoft\Windows\CurrentVersion\Run"
+    Name = "OneDriveSetup"
+}
+Remove-ItemProperty @remove_onedrive
+```
+
+<b>Unload default user registry:</b>
+
+```batch
+REG unload HKLM\image
 ```
 
 <b>Dismount-WindowsImage:</b>
