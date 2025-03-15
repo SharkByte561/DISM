@@ -14,6 +14,19 @@
   * Notepad++
   * Firefox
 
+<b>Image modifications:</b>
+
+* Configure RunOnce to execute desktop-provisioning.ps1
+  * Install <b>VMware tools</b>
+  * Wait for network connection
+  * Install Chocolatey
+  * Install Adobe Reader
+  * Install 7-Zip
+  * Install Google Chrome
+  * Install Zoom
+  * Install Notepad++
+  * Install Firefox
+
 <b>Downloads:</b>
 
 * [Chocolatey](https://github.com/chocolatey/choco)
