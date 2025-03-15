@@ -1,4 +1,4 @@
-# DISM: Adding Ninite software installation to Windows image
+# DISM: Adding PowerShell software installation to Windows image
 
 <b>Documentation:</b>
 
@@ -6,7 +6,7 @@
 
 <b>Objectives:</b>
 
-* Add Ninite software installation to windows image
+* Add PowerShell software installation to windows image
   * Adobe Reader
   * 7-Zip
   * Google Chrome
@@ -18,18 +18,21 @@
 
 * Configure RunOnce to execute desktop-provisioning.ps1
   * Install <b>VMware tools</b>
-  * Wait for network connection
-  * Execute Ninite
-    * Install Adobe Reader
-    * Install 7-Zip
-    * Install Google Chrome
-    * Install Zoom
-    * Install Notepad++
-    * Install Firefox
+  * Install Adobe Reader
+  * Install 7-Zip
+  * Install Google Chrome
+  * Install Zoom
+  * Install Notepad++
+  * Install Firefox
 
 <b>Downloads:</b>
 
-* [Ninite](https://ninite.com/)
+* [Adobe Reader](https://get.adobe.com/reader/enterprise/)
+* [7-Zip](https://7-zip.org/download.html)
+* [Google Chrome](https://chromeenterprise.google/download/#windows-tab)
+* [Zoom](https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0060407)
+* [Notepad++](https://notepad-plus-plus.org/downloads/)
+* [FireFox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release)
 
 <b>Image modification:</b>
 
@@ -67,10 +70,23 @@ if (!$provisioning_folder.Exists) {
 
 # Move provisioning files to Windows image
 foreach ($item in ([System.IO.DirectoryInfo]$provisioning_files).GetFiles()) {
-    if ($item.name -match "Ninite.+") {
-        [void]$item.CopyTo("$($provisioning_folder.FullName)\ninite.exe", $true)
+    if ($item.name -match "AcroRdrDC.+") {
+        [void]$item.CopyTo("$($provisioning_folder.FullName)\AcroRdrDC.exe", $true)
         continue
     }
+    elseif($item.name -match "Firefox Setup.+"){
+        [void]$item.CopyTo("$($provisioning_folder.FullName)\Firefox Setup.msi", $true)
+        continue
+    }
+    elseif($item.name -match "7z.+"){
+        [void]$item.CopyTo("$($provisioning_folder.FullName)\7z.exe", $true)
+        continue
+    }
+    elseif($item.name -match "npp.+"){
+        [void]$item.CopyTo("$($provisioning_folder.FullName)\npp.exe", $true)
+        continue
+    }
+
     [void]$item.CopyTo("$($provisioning_folder.FullName)\$($item.Name)", $true)
 }
 
