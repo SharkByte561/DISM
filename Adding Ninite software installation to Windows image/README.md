@@ -126,7 +126,7 @@ if(!$image_output_path.Exists){
 $split_image = @{
     ImagePath      = $image_path
     SplitImagePath = "$($image_output_path.FullName)\install.swm"
-    FileSize       = 1024
+    FileSize       = 2048
     CheckIntegrity = $true
 }
 Split-WindowsImage @split_image
