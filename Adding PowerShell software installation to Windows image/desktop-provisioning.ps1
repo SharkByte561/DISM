@@ -41,7 +41,7 @@ foreach ($package in $packages) {
     if ($package.exe -Like "*.msi") {
         $execute = @{
             FilePath     = "msiexec"
-            ArgumentList = "/i $($env:ProgramData)\provisioning\package.exe) $($package.SilentSwitch)"
+            ArgumentList = "/i $($env:ProgramData)\provisioning\$($package.exe)) $($package.SilentSwitch)"
             NoNewWindow  = $true
             PassThru     = $true
             Wait         = $true
