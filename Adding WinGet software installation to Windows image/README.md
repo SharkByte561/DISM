@@ -130,6 +130,7 @@ Split-WindowsImage @split_image
 
 * [Preparing Windows USB and Install.wim](https://youtu.be/rdrO4Cqaow4)
 * [Reduce Install.wim size by splitting it into multiple files](https://youtu.be/fwQ1VlJvnSw)
+* [Adding Chocolatey software installation to Windows image](https://youtu.be/VnQvWDwUDW8)
 
 <b>Full playlist</b>
 
