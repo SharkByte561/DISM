@@ -39,9 +39,10 @@ $packages =
 foreach ($package in $packages) {
     Write-Host "Executing $($package.Name) installation."
     if ($package.exe -Like "*.msi") {
+        "waaa" | Out-Host
         $execute = @{
             FilePath     = "msiexec"
-            ArgumentList = "/i $($env:ProgramData)\provisioning\$($package.exe)) $($package.SilentSwitch)"
+            ArgumentList = "/i $($env:ProgramData)\provisioning\$($package.exe) $($package.SilentSwitch)"
             NoNewWindow  = $true
             PassThru     = $true
             Wait         = $true
