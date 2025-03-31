@@ -7,7 +7,7 @@
 <b>Objectives:</b>
 
 * Add Ninite software installation to windows image
-  * Adobe Reader
+  * Foxit Reader
   * 7-Zip
   * Google Chrome
   * Zoom
@@ -20,7 +20,7 @@
   * Install <b>VMware tools</b>
   * Wait for network connection
   * Execute Ninite
-    * Install Adobe Reader
+    * Install Foxit Reader
     * Install 7-Zip
     * Install Google Chrome
     * Install Zoom
