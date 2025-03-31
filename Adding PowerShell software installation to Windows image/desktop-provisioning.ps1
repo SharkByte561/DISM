@@ -22,7 +22,7 @@ $packages =
 },
 [PSCustomObject]@{
     Name         = "Firefox"
-    Exe          = "Firefox Setup.msi"
+    Exe          = "Firefox.msi"
     SilentSwitch = "/qn /norestart"
 },
 [PSCustomObject]@{

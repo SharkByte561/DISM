@@ -76,7 +76,7 @@ foreach ($item in ([System.IO.DirectoryInfo]$provisioning_files).GetFiles()) {
         continue
     }
     elseif($item.name -match "Firefox Setup.+"){
-        [void]$item.CopyTo("$($provisioning_folder.FullName)\Firefox Setup.msi", $true)
+        [void]$item.CopyTo("$($provisioning_folder.FullName)\Firefox.msi", $true)
         continue
     }
     elseif($item.name -match "7z.+"){
