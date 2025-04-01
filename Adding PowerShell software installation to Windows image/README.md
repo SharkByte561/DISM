@@ -7,7 +7,7 @@
 <b>Objectives:</b>
 
 * Add PowerShell software installation to windows image
-  * Install <b>VMware tools</b>
+  * <b>VMware tools</b>
   * Adobe Reader
   * 7-Zip
   * Google Chrome
