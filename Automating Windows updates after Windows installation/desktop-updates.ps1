@@ -49,7 +49,7 @@ if ($status) {
     $setup_runonce = @{
         Path  = "HKLM:\Software\Microsoft\Windows\CurrentVersion\RunOnce"
         Name  = "execute_provisioning"
-        Value = "cmd /c powershell.exe -ExecutionPolicy Bypass -File $($env:ProgramData)\provisioning\provisioning.ps1"
+        Value = "cmd /c powershell.exe -ExecutionPolicy Bypass -File $($env:ProgramData)\provisioning\desktop-updates.ps1"
     }
     New-ItemProperty @setup_runonce | Out-Null
     Restart-Computer
