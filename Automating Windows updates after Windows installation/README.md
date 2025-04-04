@@ -17,7 +17,8 @@
 * Configure RunOnce to execute desktop-updates.ps1
   * Install <b>VMware tools</b>
   * Wait for internet connection
-  * Download and prepare PSWindowsUpdate module
+  * Disable computer and monitor sleep
+  * Install PSWindowsUpdate module and prerequisites 
   * Download and install Windows updates
     * if restart is necessary reboot and execute desktop-updates.ps1
 
