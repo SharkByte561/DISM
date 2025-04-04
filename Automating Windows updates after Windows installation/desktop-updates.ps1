@@ -31,8 +31,7 @@ if ($null -eq $nuget) {
     Install-PackageProvider -Name NuGet -Confirm:$false -Force
     # Configure power settings
     "powercfg /x -monitor-timeout-ac 0",
-    "powercfg /x -standby-timeout-ac 0",
-    "powercfg -h off" | % {
+    "powercfg /x -standby-timeout-ac 0" | % {
         cmd /c $_
     }
 }
